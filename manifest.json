@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "StayProof",
+  "version": "1.0.0",
+  "description": "Compare hotel prices and ratings across Booking.com, Airbnb & Agoda. Cross-references Google Maps to spot fake reviews.",
+  "permissions": ["storage", "tabs", "alarms", "scripting"],
+  "host_permissions": [
+    "*://*.google.com/maps/*",
+    "*://maps.google.com/*",
+    "*://*.booking.com/*",
+    "*://*.airbnb.com/*",
+    "*://*.airbnb.com.sg/*",
+    "*://*.airbnb.com.au/*",
+    "*://*.airbnb.com.my/*",
+    "*://*.airbnb.com.tw/*",
+    "*://*.airbnb.com.hk/*",
+    "*://*.airbnb.com.br/*",
+    "*://*.airbnb.co.uk/*",
+    "*://*.airbnb.co.in/*",
+    "*://*.airbnb.co.id/*",
+    "*://*.airbnb.co.jp/*",
+    "*://*.airbnb.co.kr/*",
+    "*://*.airbnb.co.nz/*",
+    "*://*.airbnb.co.th/*",
+    "*://*.agoda.com/*"
+  ],
+  "icons": {
+    "16": "src/icons/icon16.png",
+    "48": "src/icons/icon48.png",
+    "128": "src/icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "src/icons/icon16.png",
+      "48": "src/icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/maps/*", "*://maps.google.com/*"],
+      "js": ["src/content/google-maps/inject.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["src/vendor/leaflet/*"],
+    "matches": ["<all_urls>"]
+  }]
+}
