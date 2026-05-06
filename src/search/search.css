@@ -1,0 +1,864 @@
+:root {
+  /* ---- Spacing (4px grid) ---- */
+  --space-half: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* ---- Typography ---- */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 22px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ---- Colors: backgrounds ---- */
+  --color-bg: #f5f5f5;
+  --color-bg-card: #fff;
+  --color-bg-card-hover: #f3f2ed;
+  --color-bg-top-pick: #eef3f9;
+  --color-bg-top-pick-hover: #e4ecf6;
+  --color-bg-dedup: #f8f7f3;
+  --color-bg-btn-hover: #eeede8;
+
+  /* ---- Colors: text ---- */
+  --color-text: #2c2a25;
+  --color-text-heading: #1a1917;
+  --color-text-muted: #7a7770;
+  --color-text-secondary: #5c5a55;
+  --color-text-disabled: #a09d96;
+
+  /* ---- Colors: borders ---- */
+  --color-border: #ccc;
+  --color-border-light: #e8e6e1;
+  --color-border-active: #999;
+
+  /* ---- Colors: accent ---- */
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-disabled: #93b4f5;
+
+  /* ---- Colors: status ---- */
+  --color-danger: #dc2626;
+  --color-error: #c0392b;
+
+  /* ---- Colors: tiers ---- */
+  --color-tier-1: #2563eb;
+  --color-tier-2: #6d7fb5;
+  --color-tier-3: #888;
+  --color-tier-4: #c2685a;
+  --color-tier-5: #dc2626;
+
+  /* ---- Colors: Google Maps tiers (compressed 4.0-5.0 scale) ---- */
+  --color-gmaps-7: #1d4ed8;
+  --color-gmaps-6: #2563eb;
+  --color-gmaps-5: #4a7fda;
+  --color-gmaps-4: #6d7fb5;
+  --color-gmaps-3: #888;
+  --color-gmaps-2: #b07060;
+  --color-gmaps-1: #c2685a;
+
+  /* ---- Colors: tooltip ---- */
+  --color-tooltip-bg: #3a3935;
+  --color-tooltip-text: #fff;
+
+  /* ---- Colors: spinner ---- */
+  --color-spinner-track: #93b4f5;
+  --color-spinner-head: #2563eb;
+
+  /* ---- Radii ---- */
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* ---- Layout ---- */
+  --result-columns: 32px 1fr 55px 80px 155px 90px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: var(--space-6) var(--space-4);
+  min-width: 480px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.header-icon {
+  width: 26px;
+  height: 26px;
+}
+
+header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-half);
+}
+
+/* Search form */
+#search-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto var(--space-4);
+}
+
+.search-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+#search-form input,
+#search-form button {
+  height: 38px;
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-3);
+}
+
+#destination {
+  flex: 1;
+  min-width: 160px;
+}
+
+#checkin,
+#checkout {
+  width: 150px;
+}
+
+.price-field {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.price-prefix {
+  padding: 0 var(--space-1) 0 var(--space-2);
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+#max-price {
+  width: 100px;
+  border: none;
+  outline: none;
+  padding-left: 0;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+.filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  height: 38px;
+}
+
+.filter-label input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+#search-btn {
+  background: var(--color-accent);
+  color: var(--color-bg-card);
+  border: none;
+  padding: 0 var(--space-5);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+#search-btn:disabled {
+  background: var(--color-accent-disabled);
+  cursor: not-allowed;
+}
+
+#search-btn.search-btn-loading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.search-btn-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: gmaps-spin 0.8s linear infinite;
+}
+
+/* Status */
+.search-status {
+  max-width: 900px;
+  margin: 0 auto var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  min-height: 32px;
+}
+
+.search-status .status-line {
+  /* inline in single row */
+}
+
+.search-status .status-sep {
+  color: var(--color-text-disabled);
+  margin: 0 var(--space-1);
+}
+
+.search-status .status-error {
+  color: var(--color-error);
+}
+
+/* Compact status badges — single row after all platforms report */
+.status-badges-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-half) var(--space-2);
+  border-radius: 10px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: #fff;
+  line-height: 1;
+}
+
+.status-badge.badge-booking { background: #003580; }
+.status-badge.badge-airbnb { background: #FF5A5F; }
+.status-badge.badge-agoda { background: #5392F9; }
+
+.status-badge.status-badge-error {
+  opacity: 0.5;
+}
+
+/* Results table */
+.results-table {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.results-empty {
+  text-align: center;
+  color: var(--color-text-disabled);
+  padding: var(--space-10) 0;
+  font-size: var(--font-size-base);
+}
+
+/* Column header — labels above results grid */
+.column-header {
+  display: grid;
+  grid-template-columns: var(--result-columns);
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.column-header-cell {
+  /* Default left-aligned */
+}
+.column-header-cell.header-price,
+.column-header-cell.header-rating {
+  text-align: right;
+}
+.column-header-cell.header-gmaps {
+  text-align: center;
+}
+
+/* Sortable column headers */
+.column-header-cell[data-sort-key] {
+  cursor: pointer;
+  user-select: none;
+}
+.column-header-cell[data-sort-key]:hover {
+  color: var(--color-text);
+}
+.column-header-cell.sort-asc::after {
+  content: ' \25B2';
+  font-size: 9px;
+}
+.column-header-cell.sort-desc::after {
+  content: ' \25BC';
+  font-size: 9px;
+}
+
+/* Result row — CSS grid with fixed columns */
+.result-row {
+  display: grid;
+  grid-template-columns: var(--result-columns);
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3);
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border-light);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.result-row:first-child,
+.column-header + .result-row {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.result-row:last-child {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border-bottom: none;
+}
+
+.result-row:hover {
+  background: var(--color-bg-card-hover);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Platform badge */
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 18px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-tooltip-text);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.badge-booking {
+  background: #003580;
+}
+
+.badge-airbnb {
+  background: #FF5A5F;
+}
+
+.badge-agoda {
+  background: #5392F9;
+}
+
+.badge-container {
+  display: flex;
+  gap: var(--space-half);
+}
+
+.badge-mini {
+  width: auto;
+  min-width: 16px;
+  padding: 0 2px;
+  height: 14px;
+  font-size: 9px;
+}
+
+/* Result columns */
+.result-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: var(--font-weight-medium);
+}
+
+.result-price {
+  text-align: right;
+  font-weight: var(--font-weight-semibold);
+}
+
+.result-rating {
+  text-align: right;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.result-price,
+.result-rating,
+.result-gmaps,
+.gmaps-link {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Colour-coded price tiers — blue (cheap) to red (expensive), colourblind-safe */
+.price-tier-1 { color: var(--color-tier-1); }
+.price-tier-2 { color: var(--color-tier-2); }
+.price-tier-3 { color: var(--color-tier-3); }
+.price-tier-4 { color: var(--color-tier-4); }
+.price-tier-5 { color: var(--color-tier-5); }
+
+/* Colour-coded rating tiers — red (low) to blue (high), colourblind-safe */
+.rating-tier-1 { color: var(--color-tier-5); }
+.rating-tier-2 { color: var(--color-tier-4); }
+.rating-tier-3 { color: var(--color-tier-3); }
+.rating-tier-4 { color: var(--color-tier-2); }
+.rating-tier-5 { color: var(--color-tier-1); }
+
+/* Google Maps rating tiers (1-5 scale, higher = better, inverted like rating) */
+/* Google Maps / cross-ref column */
+.result-gmaps {
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+.gmaps-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.gmaps-link.gmaps-tier-1 { color: var(--color-gmaps-1); }
+.gmaps-link.gmaps-tier-2 { color: var(--color-gmaps-2); }
+.gmaps-link.gmaps-tier-3 { color: var(--color-gmaps-3); }
+.gmaps-link.gmaps-tier-4 { color: var(--color-gmaps-4); }
+.gmaps-link.gmaps-tier-5 { color: var(--color-gmaps-5); }
+.gmaps-link.gmaps-tier-6 { color: var(--color-gmaps-6); }
+.gmaps-link.gmaps-tier-7 { color: var(--color-gmaps-7); }
+
+.gmaps-link:hover {
+  text-decoration: underline;
+}
+
+.gmaps-low-reviews {
+  opacity: 0.4;
+  font-weight: var(--font-weight-normal);
+}
+
+.result-rating.few-reviews {
+  color: var(--color-text-muted, #999) !important;
+}
+
+.gmaps-pending {
+  color: var(--color-text-disabled);
+  font-style: italic;
+}
+
+.gmaps-checking {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gmaps-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-spinner-track);
+  border-top-color: var(--color-spinner-head);
+  border-radius: 50%;
+  animation: gmaps-spin 0.8s linear infinite;
+}
+
+@keyframes gmaps-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Check button for manual cross-reference */
+.xref-check-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-half) var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.xref-check-btn:hover {
+  background: var(--color-bg-btn-hover);
+  border-color: var(--color-border-active);
+  color: var(--color-text);
+}
+
+.gmaps-not-found {
+  color: var(--color-text-disabled);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+}
+
+/* Top Picks section — standout listings above results */
+.top-picks-section {
+  max-width: 900px;
+  margin: 0 auto var(--space-4);
+}
+
+.top-picks-heading {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+
+.top-picks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.top-pick-card {
+  background: var(--color-bg-top-pick);
+  border: 1px solid var(--color-border-light);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.top-pick-card:hover {
+  background: var(--color-bg-top-pick-hover);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.top-pick-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-pick-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-pick-details {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+
+/* Inline top picks — highlighted rows in the results table */
+.result-row.top-pick-row {
+  background: var(--color-bg-top-pick);
+}
+
+.result-row.top-pick-row:hover {
+  background: var(--color-bg-top-pick-hover);
+}
+
+.top-pick-badge {
+  display: inline-block;
+  margin-left: var(--space-2);
+  padding: 0 var(--space-2);
+  font-size: 9px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-accent);
+  background: rgba(37, 99, 235, 0.08);
+  border-radius: 10px;
+  vertical-align: middle;
+  line-height: 16px;
+}
+
+/* Anomaly-flagged listings */
+.result-row.anomaly-flagged {
+  border-left: 3px solid var(--color-danger);
+  padding-left: 7px;
+  opacity: 0.7;
+}
+
+.anomaly-warn {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  cursor: help;
+}
+
+.map-pin-icon {
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.map-pin-icon:hover {
+  opacity: 1;
+}
+
+/* CSS tooltips (native title doesn't work in extension popups) */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-tooltip-bg);
+  color: var(--color-tooltip-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Multi-line rating tooltip (blending breakdown) */
+.result-rating[data-tooltip]:hover::after {
+  white-space: pre-line;
+  width: max-content;
+  min-width: 220px;
+  max-width: 320px;
+  text-align: left;
+  line-height: 1.5;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Multi-line Google Maps tooltip (anomaly signals can be long) */
+.gmaps-link[data-tooltip]:hover::after {
+  white-space: pre-line;
+  width: max-content;
+  min-width: 220px;
+  max-width: 400px;
+  text-align: left;
+  line-height: 1.5;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Dedup sub-row — platform links for grouped listings */
+.dedup-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-half) var(--space-3) var(--space-1) 42px;
+  background: var(--color-bg-dedup);
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: var(--font-size-xs);
+}
+
+.dedup-label {
+  color: var(--color-tier-3);
+}
+
+.dedup-link {
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-tooltip-text);
+}
+
+.dedup-link:hover {
+  opacity: 0.8;
+}
+
+.dedup-link.badge-booking { background: #003580; }
+.dedup-link.badge-airbnb { background: #FF5A5F; }
+.dedup-link.badge-agoda { background: #5392F9; }
+
+/* Responsive: stack form on small screens */
+@media (max-width: 600px) {
+  .search-row {
+    flex-direction: column;
+  }
+
+  #search-form input,
+  #search-form button {
+    width: 100%;
+  }
+
+  #checkin,
+  #checkout {
+    width: 100%;
+  }
+
+  .filter-row {
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    flex: none;
+  }
+
+  :root {
+    --result-columns: 28px 1fr 45px 60px 100px;
+  }
+
+  .column-header {
+    display: none;
+  }
+
+  .result-row {
+    grid-template-columns: var(--result-columns);
+    font-size: var(--font-size-xs);
+  }
+
+  .result-gmaps {
+    display: none;
+  }
+}
+
+/* ── Map ── */
+#map-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#map-toggle-btn {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+#map-toggle-btn:hover {
+  background: var(--color-bg-btn-hover);
+}
+#map-status {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+#map-container {
+  height: 350px;
+  max-width: 900px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  z-index: 0;
+}
+.map-pin {
+  background: none !important;
+  border: none !important;
+}
+.pin-label {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  line-height: 1.4;
+}
+.result-distance {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+  text-align: right;
+}
+.header-distance {
+  width: 55px;
+  text-align: right;
+}
+
+/* Row highlight when pin clicked */
+.result-row.pin-highlighted {
+  background: rgba(37, 99, 235, 0.08);
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+  transition: background 0.3s, outline 0.3s;
+}
+
+/* Pin highlight when row hovered */
+.pin-label.pin-active {
+  transform: scale(1.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* Anomaly ring on pins */
+.pin-anomaly .pin-label {
+  outline: 2px solid #dc2626;
+  outline-offset: 1px;
+}
+
+/* Popup mini-card */
+.pin-popup-container .leaflet-popup-content {
+  margin: 8px 10px;
+}
+.pin-popup-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.pin-popup-details {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}

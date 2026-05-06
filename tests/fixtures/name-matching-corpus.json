@@ -1,0 +1,839 @@
+[
+  {
+    "nameA": "Novotel Da Nang Premier Han River",
+    "nameB": "Novotel Da Nang Premier Han River",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Identical names across platforms"
+  },
+  {
+    "nameA": "Hilton Garden Inn Hanoi",
+    "nameB": "Hilton Garden Inn Hanoi",
+    "city": "Hanoi",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Exact match chain hotel"
+  },
+  {
+    "nameA": "InterContinental Danang Sun Peninsula Resort",
+    "nameB": "InterContinental Danang Sun Peninsula Resort",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Exact match luxury resort"
+  },
+  {
+    "nameA": "Sheraton Grand Sukhumvit",
+    "nameB": "Sheraton Grande Sukhumvit",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Minor spelling variant (Grand/Grande)"
+  },
+  {
+    "nameA": "Pullman Bangkok Hotel G",
+    "nameB": "Pullman Bangkok Hotel G",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Exact match"
+  },
+  {
+    "nameA": "The Anam Cam Ranh",
+    "nameB": "The Anam Cam Ranh",
+    "city": "Cam Ranh",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Exact match resort"
+  },
+  {
+    "nameA": "Mandarin Oriental Bangkok",
+    "nameB": "Mandarin Oriental, Bangkok",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Comma punctuation difference only"
+  },
+  {
+    "nameA": "JW Marriott Hotel Hanoi",
+    "nameB": "JW Marriott Hotel Hanoi",
+    "city": "Hanoi",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Exact chain hotel match"
+  },
+  {
+    "nameA": "Park Hyatt Saigon",
+    "nameB": "Park Hyatt Saigon",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Exact match, city alias (Saigon = HCMC)"
+  },
+  {
+    "nameA": "Anantara Riverside Bangkok Resort",
+    "nameB": "Anantara Riverside Bangkok Resort",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "exact",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Exact match riverside resort"
+  },
+  {
+    "nameA": "Kh\u00e1ch S\u1ea1n Nh\u1eadt Linh",
+    "nameB": "Khach San Nhat Linh",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["google-maps", "booking"],
+    "notes": "Vietnamese diacritics stripped in Booking listing"
+  },
+  {
+    "nameA": "H\u1ed9i An Sincerity Hotel & Spa",
+    "nameB": "Hoi An Sincerity Hotel and Spa",
+    "city": "Hoi An",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Vietnamese tone marks removed, & vs and"
+  },
+  {
+    "nameA": "Novotel \u0110\u00e0 N\u1eb5ng Premier Han River",
+    "nameB": "Novotel Danang Premier Han River",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["booking", "google-maps"],
+    "notes": "D-bar in city name, compound city variant"
+  },
+  {
+    "nameA": "\u0110\u00e0 N\u1eb5ng Mikazuki Japanese Resorts & Spa",
+    "nameB": "Da Nang Mikazuki Japanese Resorts and Spa",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["booking", "google-maps"],
+    "notes": "D-bar transliteration plus diacritics"
+  },
+  {
+    "nameA": "Kh\u00e1ch s\u1ea1n \u0110\u1ed3ng Kh\u1edfi",
+    "nameB": "Dong Khoi Hotel",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["google-maps", "booking"],
+    "notes": "Vietnamese name with d-bar to English transliteration"
+  },
+  {
+    "nameA": "S\u00e0i G\u00f2n Kim Li\u00ean Resort",
+    "nameB": "Sai Gon Kim Lien Resort",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Vietnamese diacritics on multiple words"
+  },
+  {
+    "nameA": "Furama \u0110\u00e0 N\u1eb5ng Resort",
+    "nameB": "Furama Resort Danang",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["booking", "google-maps"],
+    "notes": "D-bar plus word order change"
+  },
+  {
+    "nameA": "Cent\u00e2ra Sandy Beach Non N\u01b0\u1edbc",
+    "nameB": "Centara Sandy Beach Non Nuoc",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Horn vowel and diacritics"
+  },
+  {
+    "nameA": "H\u00e0 N\u1ed9i Pearl Hotel",
+    "nameB": "Ha Noi Pearl Hotel",
+    "city": "Hanoi",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Vietnamese diacritics in city name tokens"
+  },
+  {
+    "nameA": "Ph\u00fa Qu\u1ed1c Vinpearl Resort & Golf",
+    "nameB": "Phu Quoc Vinpearl Resort and Golf",
+    "city": "Phu Quoc",
+    "expected": true,
+    "category": "transliteration",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Vietnamese diacritics on location tokens"
+  },
+  {
+    "nameA": "Hyatt Regency Bangkok Sukhumvit - Great Pool & Gym",
+    "nameB": "Hyatt Regency Bangkok Sukhumvit",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Booking has marketing suffix after dash"
+  },
+  {
+    "nameA": "Mercure Da Nang French Village Bana Hills Resort",
+    "nameB": "Mercure Bana Hills",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google uses shortened version"
+  },
+  {
+    "nameA": "Liberty Central Saigon Citypoint Hotel",
+    "nameB": "Liberty Central Citypoint",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops city name and hotel suffix"
+  },
+  {
+    "nameA": "Mia Saigon Luxury Boutique Hotel",
+    "nameB": "Mia Saigon",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Google truncates to core name"
+  },
+  {
+    "nameA": "The Reverie Saigon",
+    "nameB": "Reverie Saigon",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops 'The' article"
+  },
+  {
+    "nameA": "Centara Grand at CentralWorld Bangkok",
+    "nameB": "Centara Grand CentralWorld",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops preposition and city"
+  },
+  {
+    "nameA": "Banyan Tree Bangkok Riverside",
+    "nameB": "Banyan Tree Bangkok",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Google drops location qualifier"
+  },
+  {
+    "nameA": "Avani+ Riverside Bangkok Hotel",
+    "nameB": "AVANI Riverside Bangkok",
+    "city": "Bangkok",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Plus sign removed, Hotel suffix dropped, case difference"
+  },
+  {
+    "nameA": "Wyndham Garden Da Nang Oceanfront",
+    "nameB": "Wyndham Garden Oceanfront",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "City name dropped by Google"
+  },
+  {
+    "nameA": "Muong Thanh Luxury Da Nang Hotel",
+    "nameB": "Muong Thanh Luxury",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Google drops city and hotel suffix"
+  },
+  {
+    "nameA": "Sala Danang Beach Hotel - Best Beach Front Location",
+    "nameB": "Sala Danang Beach Hotel",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Booking promotional suffix removed"
+  },
+  {
+    "nameA": "Hilton Da Nang - Free Breakfast & Panoramic Views",
+    "nameB": "Hilton Da Nang",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Booking promotional suffix stripped"
+  },
+  {
+    "nameA": "TMS Hotel Da Nang Beach - Formerly Zen Diamond Suites",
+    "nameB": "TMS Hotel Da Nang Beach",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Formerly-suffix removed"
+  },
+  {
+    "nameA": "A La Carte Da Nang Beach - Previously Dusit Princess",
+    "nameB": "A La Carte Da Nang Beach",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Previously-suffix removed"
+  },
+  {
+    "nameA": "Golden Bay Da Nang Hotel (Official)",
+    "nameB": "Golden Bay Da Nang Hotel",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Parenthetical official tag removed"
+  },
+  {
+    "nameA": "Risemount Premier Resort Danang",
+    "nameB": "Risemount Premier Resort Da Nang",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Compound vs split city name"
+  },
+  {
+    "nameA": "Holiday Beach Danang Hotel & Resort - 5 Star",
+    "nameB": "Holiday Beach Danang Hotel & Resort",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "suffix-variation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Star rating suffix removed"
+  },
+  {
+    "nameA": "Star City Hotel Saigon",
+    "nameB": "Starcity Hotel Saigon",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Split vs joined compound word"
+  },
+  {
+    "nameA": "Sun River Hotel",
+    "nameB": "Sunriver Hotel",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Sun River vs Sunriver"
+  },
+  {
+    "nameA": "Sky Star Hotel",
+    "nameB": "Skystar Hotel",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Split vs joined compound"
+  },
+  {
+    "nameA": "Green World Hotel",
+    "nameB": "Greenworld Hotel",
+    "city": "Ho Chi Minh City",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Green World vs Greenworld"
+  },
+  {
+    "nameA": "Ocean View Hotel Danang",
+    "nameB": "Oceanview Hotel Danang",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Ocean View vs Oceanview"
+  },
+  {
+    "nameA": "Sea Shore Hotel",
+    "nameB": "Seashore Hotel",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Sea Shore vs Seashore"
+  },
+  {
+    "nameA": "Bay Light Danang",
+    "nameB": "Baylight Danang",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "compound-word",
+    "platforms": ["airbnb", "google-maps"],
+    "notes": "Split vs joined compound"
+  },
+  {
+    "nameA": "Grand Mercure Da Nang",
+    "nameB": "Sunrise Beach Resort Hoi An",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "agoda"],
+    "notes": "Completely different hotels"
+  },
+  {
+    "nameA": "Hilton Garden Inn Hanoi",
+    "nameB": "Sofitel Legend Metropole Hanoi",
+    "city": "Hanoi",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different chain hotels in same city"
+  },
+  {
+    "nameA": "Pullman Bangkok Hotel G",
+    "nameB": "Shangri-La Hotel Bangkok",
+    "city": "Bangkok",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Different luxury chains"
+  },
+  {
+    "nameA": "Park Hyatt Saigon",
+    "nameB": "Rex Hotel Saigon",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different hotels sharing city name"
+  },
+  {
+    "nameA": "Banyan Tree Bangkok",
+    "nameB": "Chatrium Hotel Riverside Bangkok",
+    "city": "Bangkok",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "agoda"],
+    "notes": "Different luxury hotels"
+  },
+  {
+    "nameA": "Muong Thanh Da Nang",
+    "nameB": "Brilliant Hotel Da Nang",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Different budget hotels"
+  },
+  {
+    "nameA": "Alagon Saigon Hotel",
+    "nameB": "Continental Saigon Hotel",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different hotels with shared city token"
+  },
+  {
+    "nameA": "The Anam Cam Ranh",
+    "nameB": "Fusion Resort Cam Ranh",
+    "city": "Cam Ranh",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different resorts in same area"
+  },
+  {
+    "nameA": "Movenpick Resort Cam Ranh",
+    "nameB": "Radisson Blu Resort Cam Ranh",
+    "city": "Cam Ranh",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Different chain resorts at same beach"
+  },
+  {
+    "nameA": "Hotel Nikko Saigon",
+    "nameB": "Hotel Majestic Saigon",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different hotels with shared hotel+city pattern"
+  },
+  {
+    "nameA": "Melia Vinpearl Nha Trang",
+    "nameB": "Amiana Resort Nha Trang",
+    "city": "Nha Trang",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different resorts in same coastal city"
+  },
+  {
+    "nameA": "Gold Hotel Da Nang",
+    "nameB": "Gold Central Hotel by Haviland",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Gold' token, different properties"
+  },
+  {
+    "nameA": "Royal Lotus Hotel Da Nang",
+    "nameB": "Royal Hotel Saigon",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Royal' token, different cities/hotels"
+  },
+  {
+    "nameA": "Grand Mercure Da Nang",
+    "nameB": "Grand Tourane Hotel Da Nang",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Grand' token in same city"
+  },
+  {
+    "nameA": "Premier Village Da Nang Resort",
+    "nameB": "Premier Residences Phu Quoc Emerald Bay",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Shared 'Premier' token, different properties"
+  },
+  {
+    "nameA": "Sunrise Premium Resort Hoi An",
+    "nameB": "Sunrise Da Nang Beach Hotel",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Sunrise' token, different properties"
+  },
+  {
+    "nameA": "Central Hotel Da Nang",
+    "nameB": "Central Luxury Ha Long Hotel",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Shared 'Central' token, different cities"
+  },
+  {
+    "nameA": "Eden Hotel Saigon",
+    "nameB": "Eden Star Saigon Hotel",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Eden' + 'Saigon' tokens, different properties"
+  },
+  {
+    "nameA": "Green Plaza Hotel Da Nang",
+    "nameB": "Green House Hotel Da Nang",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Green' + city tokens"
+  },
+  {
+    "nameA": "Diamond Sea Hotel Da Nang",
+    "nameB": "Diamond Bay Resort Nha Trang",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Shared 'Diamond' token, different locations"
+  },
+  {
+    "nameA": "Pacific Hotel Da Nang",
+    "nameB": "Pacific Marina Hotel",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Pacific' token, different property"
+  },
+  {
+    "nameA": "Sala Danang Beach Hotel",
+    "nameB": "Sala Central Danang Hotel",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Sala' + 'Danang' tokens, different properties"
+  },
+  {
+    "nameA": "R&F Princess Cove FUJU Homestay",
+    "nameB": "R&F Princess Cove SaffronCasa",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-building",
+    "platforms": ["airbnb", "google-maps"],
+    "notes": "Different operators in same building"
+  },
+  {
+    "nameA": "Vinhomes Golden River Lux 6",
+    "nameB": "Vinhomes Golden River Seaview Apartment",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "hard-negative-same-building",
+    "platforms": ["airbnb", "google-maps"],
+    "notes": "Different apartments in same complex"
+  },
+  {
+    "nameA": "Masteri Thao Dien T1 Apartment",
+    "nameB": "Masteri Thao Dien Luxury Suite",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "hard-negative-same-building",
+    "platforms": ["airbnb", "google-maps"],
+    "notes": "Different units in same complex, most tokens shared"
+  },
+  {
+    "nameA": "Landmark 81 SkyView Apartment",
+    "nameB": "Landmark 81 CloudNine Suite",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "hard-negative-same-building",
+    "platforms": ["airbnb", "google-maps"],
+    "notes": "Same tower, different operators"
+  },
+  {
+    "nameA": "The Ascott Sathorn Bangkok Unit A",
+    "nameB": "The Ascott Sathorn Bangkok Unit B",
+    "city": "Bangkok",
+    "expected": false,
+    "category": "hard-negative-same-building",
+    "platforms": ["airbnb", "booking"],
+    "notes": "Same serviced residence, different units"
+  },
+  {
+    "nameA": "River Gate Saigon Premium",
+    "nameB": "River Gate Saigon Cozy Home",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "hard-negative-same-building",
+    "platforms": ["airbnb", "google-maps"],
+    "notes": "Same building, different hosts"
+  },
+  {
+    "nameA": "Novotel Da Nang Premier Han River",
+    "nameB": "Novotel Hoi An Premier",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same chain, different city/property"
+  },
+  {
+    "nameA": "Sheraton Grand Sukhumvit Bangkok",
+    "nameB": "Sheraton Grande Ocean Resort Hua Hin",
+    "city": "Bangkok",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same chain, different resort location"
+  },
+  {
+    "nameA": "Hilton Garden Inn Hanoi",
+    "nameB": "Hilton Hanoi Opera",
+    "city": "Hanoi",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same chain, different property in same city"
+  },
+  {
+    "nameA": "Muong Thanh Luxury Da Nang Hotel",
+    "nameB": "Muong Thanh Grand Da Nang Hotel",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Same chain, different tier in same city"
+  },
+  {
+    "nameA": "Marriott Resort & Spa Da Nang",
+    "nameB": "Marriott Suites Da Nang",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same chain, different property type in same city"
+  },
+  {
+    "nameA": "Four Points by Sheraton Da Nang",
+    "nameB": "Four Points by Sheraton Bangkok Sukhumvit 15",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "agoda"],
+    "notes": "Same chain, different country"
+  },
+  {
+    "nameA": "Vinpearl Resort & Spa Da Nang",
+    "nameB": "Vinpearl Resort Nha Trang",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Same chain, different coastal city"
+  },
+  {
+    "nameA": "Crowne Plaza West Hanoi",
+    "nameB": "Crowne Plaza Vientiane",
+    "city": "Hanoi",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same chain, different country"
+  },
+  {
+    "nameA": "\u0110\u00e0 N\u1eb5ng Golden Bay Hotel",
+    "nameB": "\u0110\u00e0 N\u1eb5ng Riverside Hotel",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["google-maps", "booking"],
+    "notes": "D-bar shared city token, different hotels"
+  },
+  {
+    "nameA": "Kh\u00e1ch s\u1ea1n \u0110\u1ed3ng Kh\u1edfi",
+    "nameB": "Kh\u00e1ch s\u1ea1n \u0110\u1ed3ng \u0110a",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["google-maps", "booking"],
+    "notes": "D-bar shared prefix, different hotel names"
+  },
+  {
+    "nameA": "Rosemary Hotel Da Nang",
+    "nameB": "Rosemary Boutique Hoi An",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-shared-token",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Shared 'Rosemary' token, different cities"
+  },
+  {
+    "nameA": "Somerset Ho Chi Minh City",
+    "nameB": "Capri by Fraser Ho Chi Minh City",
+    "city": "Ho Chi Minh City",
+    "expected": false,
+    "category": "easy-negative",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Different serviced apartments, shared city"
+  },
+  {
+    "nameA": "Wink Hotel Danang Centre",
+    "nameB": "Wink Hotel Danang Riverside",
+    "city": "Da Nang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same chain, different location in same city"
+  },
+  {
+    "nameA": "Vinpearl Condotel Beachfront Nha Trang",
+    "nameB": "Vinpearl Condotel Empire Nha Trang",
+    "city": "Nha Trang",
+    "expected": false,
+    "category": "hard-negative-same-chain",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Same chain condotel, different building"
+  },
+  {
+    "nameA": "Hiyori Hotel Da Nang",
+    "nameB": "Hiyori Ocean Resort",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Same property, Google uses shortened name"
+  },
+  {
+    "nameA": "Shilla Monogram Quangnam Danang",
+    "nameB": "Shilla Monogram",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops location qualifiers"
+  },
+  {
+    "nameA": "Chicland Danang Beach Hotel",
+    "nameB": "Chicland Hotel",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Google drops area and type suffix"
+  },
+  {
+    "nameA": "Belle Maison Parosand Danang Hotel",
+    "nameB": "Belle Maison Parosand",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops city and hotel suffix"
+  },
+  {
+    "nameA": "Altara Suites by Ri-Yaz Da Nang",
+    "nameB": "Altara Suites",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["agoda", "google-maps"],
+    "notes": "Google drops operator and city"
+  },
+  {
+    "nameA": "Cham Garden Boutique Hotel Hoi An",
+    "nameB": "Cham Garden Hoi An",
+    "city": "Hoi An",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops boutique hotel middle tokens"
+  },
+  {
+    "nameA": "Naman Retreat Resort Danang",
+    "nameB": "Naman Retreat",
+    "city": "Da Nang",
+    "expected": true,
+    "category": "truncation",
+    "platforms": ["booking", "google-maps"],
+    "notes": "Google drops resort and city"
+  }
+]

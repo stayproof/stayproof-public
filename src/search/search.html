@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StayProof</title>
+  <link rel="icon" href="../icons/icon48.png">
+  <link rel="stylesheet" href="../vendor/leaflet/leaflet.min.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+  <header>
+    <div class="header-brand">
+      <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+        <path d="M64 12 L108 34 L108 72 C108 98 86 116 64 122 C42 116 20 98 20 72 L20 34 Z"
+              fill="#16a34a" fill-opacity="0.15" stroke="#16a34a" stroke-width="5"/>
+        <path d="M46 66 L58 80 L82 48"
+              fill="none" stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>StayProof</h1>
+    </div>
+    <p class="subtitle">One search. Three platforms. Real ratings.</p>
+  </header>
+
+  <form id="search-form">
+    <div class="search-row">
+      <input type="text" id="destination" placeholder="Where are you going?" required>
+      <input type="date" id="checkin" required>
+      <input type="date" id="checkout" required>
+      <div class="price-field">
+        <span class="price-prefix">$</span>
+        <input type="number" id="max-price" placeholder="per night" min="1">
+      </div>
+      <button type="submit" id="search-btn">Search</button>
+    </div>
+    <div class="filter-row">
+      <label class="filter-label">
+        <input type="checkbox" id="entire-homes-only" checked>
+        Entire Homes
+      </label>
+      <label class="filter-label">
+        <input type="checkbox" id="guest-favourite-only" checked>
+        Guest Favourite
+      </label>
+      <label class="filter-label">
+        <input type="checkbox" id="top-rated-only" checked>
+        Top Rated
+      </label>
+      <input type="checkbox" id="dev-mode" hidden>
+    </div>
+  </form>
+
+  <div id="status" class="search-status"></div>
+
+  <div id="map-toolbar" style="display: none;">
+    <button id="map-toggle-btn" type="button">Show Map</button>
+    <span id="map-status"></span>
+  </div>
+  <div id="top-picks" class="top-picks-section" style="display: none;"></div>
+
+  <div id="map-container" style="display: none;"></div>
+
+  <div id="results" class="results-table"></div>
+
+  <script src="../vendor/leaflet/leaflet.min.js"></script>
+  <script src="../shared/scoring-config.js"></script>
+  <script src="../shared/name-matching.js"></script>
+  <script src="../shared/scoring.js"></script>
+  <script src="../shared/xref-candidates.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>
